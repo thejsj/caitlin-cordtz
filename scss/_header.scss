@@ -1,0 +1,16 @@
+.main-header {
+  margin-bottom: 40px;
+  .main-title, .info-link {
+    margin: 0;
+    font-size: 23px;
+    @include mediaQuery(768px) {
+      font-size: 42px;
+    }
+  }
+  .main-title {
+    float: left;
+  }
+  .info-link {
+    float: right;
+  }
+}

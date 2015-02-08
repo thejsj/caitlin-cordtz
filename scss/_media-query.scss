@@ -1,0 +1,28 @@
+// Media Queries
+$no-mq-support: false !default;
+$no-mq-width-threshold: 767px;
+$no-mq-height-threshold: 700px;
+@mixin mediaQuery($width: 0, $height: false) {
+    @if $no-mq-support{
+        @if $width and $width > $no-mq-width-threshold {
+            @content;
+        }
+        @if $height and $height > $no-mq-height-threshold {
+            @content;
+        }
+    } @else {
+        @if $height and $width {
+            @media ( min-width: + $width ) and ( min-height: + $height ) {
+                @content;
+            }
+        } @else if $width {
+            @media ( min-width: + $width ) {
+                @content;
+            }
+        } @else if $height {
+            @media ( min-height: + $height ) {
+                @content;
+            }
+        }
+    }
+}

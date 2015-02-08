@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'GT-Walsheim-Medium', sans-serif;
+  letter-spacing: 0.06em;
+  color: $blue;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+  border-bottom: solid 2px $blue;
+  line-height: 0.1em;
+  &:hover {
+    color: $blue-hover;
+    border-color: $blue-hover;
+  }
+  &:visited {
+    color: $blue-visited;
+    border-color: $blue-visited;
+  }
+}
+
+p {
+  line-height: 1.6em;
+  margin: 2px;
+  font-size: 23px;
+  @include mediaQuery(768px) {
+    font-size: 42px;
+  }
+}
+
+.container {
+  margin: 25px;
+  @include mediaQuery(768px) {
+    margin: 60px;
+  }
+}
+
+.clear {
+  clear: both;
+}
