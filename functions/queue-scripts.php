@@ -27,7 +27,9 @@ function load_theme_scripts() {
   if (is_front_page()) {
     $ids = get_all_ids();
   } else {
-    $ids = [get_the_id()];
+    $ids = array(
+      get_the_id()
+    );
   }
   function get_image_for_id ($id) {
     return new Image($id);
