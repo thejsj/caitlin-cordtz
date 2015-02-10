@@ -5,7 +5,6 @@ $typeface-location: '../fonts/GT-Walsheim-Medium/';
   font-style: normal;
   src: url('#{$typeface-location}/GT-Walsheim-Medium.eot'); /* IE9 Compat Modes */
   src: url('#{$typeface-location}/GT-Walsheim-Medium.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('#{$typeface-location}/GT-Walsheim-Medium.woff2') format('woff2'), /* Super Modern Browsers */
        url('#{$typeface-location}/GT-Walsheim-Medium.woff') format('woff'), /* Pretty Modern Browsers */
        url('#{$typeface-location}/GT-Walsheim-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('#{$typeface-location}/GT-Walsheim-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
@@ -16,7 +15,6 @@ $typeface-location: '../fonts/GT-Walsheim-Medium/';
   font-style: italic;
   src: url('#{$typeface-location}/GT-Walsheim-Medium-Oblique.eot'); /* IE9 Compat Modes */
   src: url('#{$typeface-location}/GT-Walsheim-Medium-Oblique.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('#{$typeface-location}/GT-Walsheim-Medium-Oblique.woff2') format('woff2'), /* Super Modern Browsers */
        url('#{$typeface-location}/GT-Walsheim-Medium-Oblique.woff') format('woff'), /* Pretty Modern Browsers */
        url('#{$typeface-location}/GT-Walsheim-Medium-Oblique.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('#{$typeface-location}/GT-Walsheim-Medium-Oblique.svg#svgFontName') format('svg'); /* Legacy iOS */

@@ -1,5 +1,9 @@
 <?php
 
+/* Classes
+------------------------------------------------ */
+  require_once('classes/image.php');
+
 /* Include Custom Function
 ------------------------------------------------ */
   require_once('functions/custom-functions.php');

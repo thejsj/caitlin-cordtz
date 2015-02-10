@@ -5,12 +5,16 @@
 body, html {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 body {
   font-family: 'GT-Walsheim-Medium', sans-serif;
   letter-spacing: 0.06em;
   color: $blue;
+  background-size: cover;
+  background-position: center center;
 }
 
 a {
