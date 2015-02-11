@@ -22,6 +22,7 @@ a {
   color: $blue;
   border-bottom: solid 2px $blue;
   line-height: 0.1em;
+  padding-bottom: 1px;
   &:hover {
     color: $blue-hover;
     border-color: $blue-hover;

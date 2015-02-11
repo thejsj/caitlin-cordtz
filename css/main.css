@@ -34,7 +34,8 @@ a {
   text-decoration: none;
   color: #0600ff;
   border-bottom: solid 2px #0600ff;
-  line-height: 0.1em; }
+  line-height: 0.1em;
+  padding-bottom: 1px; }
   a:hover {
     color: #00fff3;
     border-color: #00fff3; }
