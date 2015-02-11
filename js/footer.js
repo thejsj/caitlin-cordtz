@@ -43,6 +43,23 @@
       };
     }());
 
+    var setNavigation = function () {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, '');
+        path = decodeURIComponent(path);
+        $('a.nav').each(function () {
+            var $this = $(this);
+            var href = $this.attr('href');
+            console.log('href');
+            console.log(href, path);
+            console.log(href, window.location.href);
+            if (path.substring(0, href.length) === href || href === window.location.href) {
+              console.log('HELLO');
+              $this.addClass('active');
+            }
+        });
+    };
+
     $(document).keydown(function(e) {
       if (e.which === 37 || e.which === 39) {
         if (e.which === 37) {
@@ -58,6 +75,7 @@
       e.preventDefault(); // prevent the default action (scroll / move caret)
     });
 
+    setNavigation();
     setAppropriateImageSize();
     $window.resize(setAppropriateImageSize);
   });

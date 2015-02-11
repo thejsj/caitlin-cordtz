@@ -24,12 +24,12 @@
   <div class='container'>
     <header class='main-header'>
       <h1 class='main-title'>
-        <a href='<?php bloginfo("url"); ?>'>
+        <a href='<?php bloginfo("url"); ?>' class='nav'>
           <?php bloginfo("title"); ?>
         </a>
       </h1>
       <h3 class='info-link'>
-        <a href='<?php echo get_permalink(4); ?>'>
+        <a href='<?php echo get_permalink(4); ?>' class='nav'>
           info
         </a>
       </h3>

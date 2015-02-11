@@ -39,6 +39,9 @@ a {
   a:hover {
     color: #00fff3;
     border-color: #00fff3; }
+  a.active {
+    color: #00fff3;
+    border-color: #00fff3; }
 
 p {
   line-height: 1.6em;
