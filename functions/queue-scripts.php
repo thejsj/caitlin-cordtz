@@ -38,10 +38,10 @@ function load_theme_scripts() {
     return $image->url !== null;
   }
   wp_localize_script( 'footer', 'CaitlinCordtzData', array(
-    'images' => array_filter(
+    'images' => array_values(array_filter(
       array_map('get_image_for_id', $ids),
       "filter_by_image_not_null"
-    )
+    ))
   ));
 }
 
