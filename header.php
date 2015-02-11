@@ -24,7 +24,7 @@
   <div class='container'>
     <header class='main-header'>
       <h1 class='main-title'>
-        <a href='<?php bloginfo("url"); ?>' class='nav'>
+        <a href='<?php bloginfo("url"); ?>'>
           <?php bloginfo("title"); ?>
         </a>
       </h1>
