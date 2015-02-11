@@ -16,6 +16,8 @@
             if (key.indexOf('size') > -1) {
               var patt = new RegExp(/([0-9]*)x([0-9]*)([.A-z]*)$/gi);
               var _sizes = patt.exec(imageName);
+              console.log('_sizes');
+              console.log(_sizes);
               var size = Math.min(_sizes[1], _sizes[2]);
               if (size > maxWindowLength) {
                 return true;
