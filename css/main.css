@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'GT-Walsheim-Medium';
+  font-style: normal;
+  src: url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium.eot#iefix') format('embedded-opentype'), url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium.woff') format('woff'), url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium.ttf') format('truetype'), url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium.svg#svgFontName') format('svg');
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: 'GT-Walsheim-Medium';
+  font-style: italic;
+  src: url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium-Oblique.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium-Oblique.eot#iefix') format('embedded-opentype'), url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium-Oblique.woff') format('woff'), url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium-Oblique.ttf') format('truetype'), url('../fonts/GT-Walsheim-Medium//GT-Walsheim-Medium-Oblique.svg#svgFontName') format('svg');
+  /* Legacy iOS */ }
+
+* {
+  box-sizing: border-box; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%; }
+
+body {
+  font-family: 'GT-Walsheim-Medium', sans-serif;
+  letter-spacing: 0.06em;
+  color: #0600ff;
+  background-size: cover;
+  background-position: center center; }
+
+a {
+  text-decoration: none;
+  color: #0600ff;
+  border-bottom: solid 2px #0600ff;
+  line-height: 0.1em; }
+  a:hover {
+    color: #00fff3;
+    border-color: #00fff3; }
+
+p {
+  line-height: 1.6em;
+  margin: 2px;
+  font-size: 23px; }
+  @media (min-width: 768px) {
+    p {
+      font-size: 42px; } }
+
+.container {
+  margin: 19px 25px; }
+  @media (min-width: 768px) {
+    .container {
+      margin: 40px 60px; } }
+
+.clear {
+  clear: both; }
+
+.main-header {
+  margin-bottom: 40px; }
+  .main-header .main-title, .main-header .info-link {
+    margin: 0;
+    font-size: 23px; }
+    @media (min-width: 768px) {
+      .main-header .main-title, .main-header .info-link {
+        font-size: 42px; } }
+  .main-header .main-title {
+    float: left; }
+  .main-header .info-link {
+    float: right; }
