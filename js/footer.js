@@ -12,6 +12,8 @@
         if (window.CaitlinCordtzData !== undefined) {
           var maxWindowLength = Math.max($window.height(), $window.width());
           if (window.CaitlinCordtzData.images[index] === undefined) {
+            console.log(index);
+            console.log(window.CaitlinCordtzData.images);
             console.log(window.CaitlinCordtzData.images[index]);
           }
           var allSizes = window.CaitlinCordtzData.images[index].sizes;
