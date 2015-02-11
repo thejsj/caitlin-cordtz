@@ -11,6 +11,9 @@
         index = (index !== undefined ? index : 0);
         if (window.CaitlinCordtzData !== undefined) {
           var maxWindowLength = Math.max($window.height(), $window.width());
+          if (window.CaitlinCordtzData.images[index] === undefined) {
+            console.log(window.CaitlinCordtzData.images[index]);
+          }
           var allSizes = window.CaitlinCordtzData.images[index].sizes;
           var sizesLargerThanMaxWindowLength = _.filter(allSizes, function (imageName, key) {
             if (key.indexOf('size') > -1) {
