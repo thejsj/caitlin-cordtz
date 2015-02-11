@@ -60,6 +60,9 @@ p {
 .clear {
   clear: both; }
 
+#loaded-images-container {
+  display: none; }
+
 .main-header {
   margin-bottom: 40px; }
   .main-header .main-title, .main-header .info-link {

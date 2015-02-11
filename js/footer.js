@@ -5,69 +5,24 @@
 
   $(document).ready(function () {
 
-    var $window = $(window);
-    var getAppropriateSize = (function () {
-      return function (index) {
-        index = (index !== undefined ? index : 0);
-        if (window.CaitlinCordtzData !== undefined) {
-          var maxWindowLength = Math.max($window.height(), $window.width());
-          var allSizes = window.CaitlinCordtzData.images[index].sizes;
-          var sizesLargerThanMaxWindowLength = _.filter(allSizes, function (imageName, key) {
-            if (key.indexOf('size') > -1) {
-              var patt = new RegExp(/([0-9]*)x([0-9]*)([.A-z]*)$/gi);
-              var _sizes = patt.exec(imageName);
-              var size = Math.min(_sizes[1], _sizes[2]);
-              if (size > maxWindowLength) {
-                return true;
-              }
-            }
-            return false;
-          });
-          return sizesLargerThanMaxWindowLength[0];
-        }
-      };
-    }());
-
-    var imageIndex = 0;
-    var totalNumberOfImages = window.CaitlinCordtzData.images.length;
-
-    var setAppropriateImageSize = (function () {
-      var $body = $('body');
-      return function () {
-        $body.css('background-image', 'url(' + getAppropriateSize(imageIndex) + ')');
-      };
-    }());
-
     var setNavigation = function () {
-        var path = window.location.pathname;
-        path = path.replace(/\/$/, '');
-        path = decodeURIComponent(path);
-        $('a.nav').each(function () {
-            var $this = $(this);
-            var href = $this.attr('href');
-            if (path.substring(0, href.length) === href || href === window.location.href) {
-              $this.addClass('active');
-            }
-        });
+      var path = window.location.pathname;
+      path = path.replace(/\/$/, '');
+      path = decodeURIComponent(path);
+      $('a.nav').each(function () {
+        var $this = $(this);
+        var href = $this.attr('href');
+        if (path.substring(0, href.length) === href || href === window.location.href) {
+          $this.addClass('active');
+        }
+      });
     };
-
-    $(document).keydown(function(e) {
-      if (e.which === 37 || e.which === 39) {
-        if (e.which === 37) {
-          imageIndex += 1;
-          if (imageIndex >= totalNumberOfImages) imageIndex = 0;
-        }
-        if (e.which === 39) {
-          imageIndex -= 1;
-          if (imageIndex < 0) imageIndex = totalNumberOfImages - 1;
-        }
-        setAppropriateImageSize(imageIndex);
-      }
-      e.preventDefault(); // prevent the default action (scroll / move caret)
-    });
-
     setNavigation();
-    setAppropriateImageSize();
-    $window.resize(setAppropriateImageSize);
+
+    var slideshow = new window.SlideShow();
+    slideshow.init();
+    $(document).keydown(_.bind(slideshow.keyDownHandler, slideshow));
+    slideshow.setAppropriateImageSize();
+    $(window).resize(_.bind(slideshow.setAppropriateImageSize, slideshow));
   });
 }(window.jQuery));
