@@ -11,11 +11,6 @@
         index = (index !== undefined ? index : 0);
         if (window.CaitlinCordtzData !== undefined) {
           var maxWindowLength = Math.max($window.height(), $window.width());
-          if (window.CaitlinCordtzData.images[index] === undefined) {
-            console.log(index);
-            console.log(window.CaitlinCordtzData.images);
-            console.log(window.CaitlinCordtzData.images[index]);
-          }
           var allSizes = window.CaitlinCordtzData.images[index].sizes;
           var sizesLargerThanMaxWindowLength = _.filter(allSizes, function (imageName, key) {
             if (key.indexOf('size') > -1) {
@@ -50,11 +45,7 @@
         $('a.nav').each(function () {
             var $this = $(this);
             var href = $this.attr('href');
-            console.log('href');
-            console.log(href, path);
-            console.log(href, window.location.href);
             if (path.substring(0, href.length) === href || href === window.location.href) {
-              console.log('HELLO');
               $this.addClass('active');
             }
         });
