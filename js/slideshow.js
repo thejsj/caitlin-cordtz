@@ -16,6 +16,7 @@ window.SlideShow.prototype.init = function () {
 };
 
 window.SlideShow.prototype.startTimeout = function () {
+  console.log('startTimeout - set');
   this.nextTimeout = setTimeout(_.bind(function () {
     console.log('startTimeout');
     this.goToNext();
