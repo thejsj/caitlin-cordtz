@@ -25,6 +25,12 @@
           }
           return false;
         });
+        if (sizesLargerThanMaxWindowLength[0] === undefined) {
+          console.log('-- UNDEFINED --');
+          console.log(allSizes);
+          console.log(sizesLargerThanMaxWindowLength);
+          console.log(maxWindowLength);
+        }
         return sizesLargerThanMaxWindowLength[0];
       }
     };
