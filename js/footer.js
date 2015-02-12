@@ -23,6 +23,6 @@
     slideshow.init();
     $(document).keydown(_.bind(slideshow.keyDownHandler, slideshow));
     slideshow.setAppropriateImageSize();
-    $(window).resize(_.bind(slideshow.setAppropriateImageSize, slideshow));
+    $(window).resize(_.bind(slideshow.resize, slideshow));
   });
 }(window.jQuery));

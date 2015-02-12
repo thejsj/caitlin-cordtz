@@ -15,6 +15,11 @@ window.SlideShow.prototype.init = function () {
   this.startTimeout();
 };
 
+window.SlideShow.prototype.resize = function () {
+  this.loadAllImages();
+  this.setAppropriateImageSize();
+};
+
 window.SlideShow.prototype.startTimeout = function () {
   this.nextTimeout = setTimeout(_.bind(function () {
     this.goToNext();
