@@ -19,6 +19,8 @@
               if (size > maxWindowLength) {
                 return true;
               }
+            } else {
+              console.log('Is Not Array');
             }
           }
           return false;
