@@ -14,6 +14,7 @@
         var sizesLargerThanMaxWindowLength = _.filter(allSizes, function (imageName, key) {
           if (key.indexOf('size') > -1) {
             var _sizes = patt.exec(imageName);
+            console.log('_sizes');
             window._sizes = _sizes;
             if (_.isArray(_sizes) && _sizes.length >= 2) {
               var size = Math.min(_sizes[1], _sizes[2]);
