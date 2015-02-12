@@ -20,7 +20,7 @@
                 return true;
               }
             } else {
-              console.log('Is Not Array');
+              console.log('Is Not Array', index, window.CaitlinCordtzData.images[index]);
             }
           }
           return false;
