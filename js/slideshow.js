@@ -57,6 +57,8 @@ window.SlideShow.prototype.keyDownHandler = function (e) {
 };
 
 window.SlideShow.prototype.setAppropriateImageSize = function () {
-  console.log(window.getAppropriateSize(this.imageIndex), this.imageIndex);
+  if (window.getAppropriateSize(this.imageIndex)) {
+    console.log('Undefined Index:', this.imageIndex, window.getAppropriateSize(this.imageIndex));
+  }
   this.$body.css('background-image', 'url(' + window.getAppropriateSize(this.imageIndex) + ')');
 };

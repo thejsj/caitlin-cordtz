@@ -4,7 +4,7 @@
 
         private $all_sizes;
 
-        public function __construct($post_id, $attachment_id = false, $image_size = false ){
+        public function __construct($post_id, $attachment_id = false, $image_size = 'full' ){
 
             global $_wp_additional_image_sizes;
             $this->all_sizes = get_intermediate_image_sizes();
@@ -33,7 +33,7 @@
             $this->sizes = $this->get_all_sizes();
 
             // Get Image URL
-            $this->url = $this->get_url( (isset($this->image_size)) ? $this->image_size : 'large' );
+            $this->url = $this->get_url( (isset($this->image_size)) ? $this->image_size : 'full' );
         }
 
         /**
@@ -43,7 +43,7 @@
          */
         public function get_url( $size = false){
             if( !isset( $size ) || $size === false ){
-                $size = 'large';
+                $size = 'full';
             }
             $url = wp_get_attachment_image_src(
                 $this->attachment_id,
