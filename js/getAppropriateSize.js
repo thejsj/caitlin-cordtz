@@ -28,8 +28,24 @@
         if (sizesLargerThanMaxWindowLength[0] === undefined) {
           console.log('-- UNDEFINED --');
           console.log(allSizes);
-          console.log(sizesLargerThanMaxWindowLength);
           console.log(maxWindowLength);
+          var sizesLargerThanMaxWindowLength = _.filter(allSizes, function (imageName, key) {
+            console.log('imageName:', imageName);
+            if (key.indexOf('size') > -1) {
+              var _sizes = patt.exec(imageName);
+              console.log('_sizes', _sizes);
+              if (_sizes !== null && _sizes.length >= 2) {
+                var size = Math.min(_sizes[1], _sizes[2]);
+                if (size > maxWindowLength) {
+                  return true;
+                }
+              } else {
+                // console.log('Is Not Array', index, patt.exec(imageName), window.CaitlinCordtzData.images[index]);
+              }
+            }
+            return false;
+          });
+          console.log('sizesLargerThanMaxWindowLength:', sizesLargerThanMaxWindowLength);
         }
         return sizesLargerThanMaxWindowLength[0];
       }
