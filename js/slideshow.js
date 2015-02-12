@@ -57,6 +57,6 @@ window.SlideShow.prototype.keyDownHandler = function (e) {
 };
 
 window.SlideShow.prototype.setAppropriateImageSize = function () {
-  console.log(window.getAppropriateSize(this.imageIndex));
+  console.log(window.getAppropriateSize(this.imageIndex), this.imageIndex);
   this.$body.css('background-image', 'url(' + window.getAppropriateSize(this.imageIndex) + ')');
 };
