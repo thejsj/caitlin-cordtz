@@ -51,10 +51,10 @@ window.SlideShow.prototype.keyDownHandler = function (e) {
   clearTimeout(this.nextTimeout);
   if (e.which === 37 || e.which === 39) {
     if (e.which === 37) {
-      this.goToNext();
+      this.goToPrev();
     }
     if (e.which === 39) {
-      this.goToPrev();
+      this.goToNext();
     }
   }
   this.startTimeout();
