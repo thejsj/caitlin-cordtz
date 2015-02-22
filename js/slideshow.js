@@ -12,12 +12,12 @@ window.SlideShow.prototype.init = function () {
   this.$loadedImagesContainer = jQuery('#loaded-images-container');
   this.$body = jQuery('body');
   window.$loadedImagesContainer = this.$loadedImagesContainer;
+  this.loadAllImages();
   this.$loadedImagesContainer.imagesLoaded(_.bind(function () {
     window.console.log('All Images Loaded');
     jQuery(document).keydown(_.bind(this.keyDownHandler, this));
     this.startTimeout();
   }, this));
-  this.loadAllImages();
 };
 
 window.SlideShow.prototype.resize = function () {
