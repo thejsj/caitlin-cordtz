@@ -6,7 +6,6 @@
   $(document).ready(function () {
     var slideshow = new window.SlideShow();
     slideshow.init();
-    $(document).keydown(_.bind(slideshow.keyDownHandler, slideshow));
     slideshow.setAppropriateImageSize();
     $(window).resize(_.bind(slideshow.resize, slideshow));
   });
