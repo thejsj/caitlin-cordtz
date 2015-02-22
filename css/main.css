@@ -63,7 +63,9 @@ p {
   clear: both; }
 
 #loaded-images-container {
-  display: none; }
+  width: 1px;
+  height: 1px;
+  opacity: 0; }
 
 .main-header {
   margin-bottom: 40px; }
