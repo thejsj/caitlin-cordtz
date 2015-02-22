@@ -53,7 +53,6 @@ window.SlideShow.prototype.loadAllImages = function () {
 };
 
 window.SlideShow.prototype.keyDownHandler = function (e) {
-  window.console.log('keyDownHandler');
   clearTimeout(this.nextTimeout);
   if (e.which === 37 || e.which === 39) {
     if (e.which === 37) {
