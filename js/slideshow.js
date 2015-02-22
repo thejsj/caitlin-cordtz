@@ -14,6 +14,7 @@ window.SlideShow.prototype.init = function () {
   window.$loadedImagesContainer = this.$loadedImagesContainer;
   this.loadAllImages();
   this.$loadedImagesContainer.imagesLoaded(_.bind(function () {
+    alert('All Images Loaded');
     window.console.log('All Images Loaded');
     jQuery(document).keydown(_.bind(this.keyDownHandler, this));
     this.startTimeout();
