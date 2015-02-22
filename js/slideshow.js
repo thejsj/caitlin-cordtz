@@ -14,9 +14,11 @@ window.SlideShow.prototype.init = function () {
   window.$loadedImagesContainer = this.$loadedImagesContainer;
   this.loadAllImages();
   this.$loadedImagesContainer.imagesLoaded(_.bind(function () {
-    window.console.log('All Images Loaded');
-    jQuery(document).keydown(_.bind(this.keyDownHandler, this));
-    this.startTimeout();
+    window.console.log('All Images Loaded: ', this.totalNumberOfImages);
+    if (this.totalNumberOfImages > 1) {
+      jQuery(document).keydown(_.bind(this.keyDownHandler, this));
+      this.startTimeout();
+    }
   }, this));
 };
 
