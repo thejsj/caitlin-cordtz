@@ -28,7 +28,8 @@ body {
   letter-spacing: 0.06em;
   color: #0600ff;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  -webkit-transform: translate3d(0, 0, 0); }
 
 a {
   text-decoration: none;
